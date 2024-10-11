@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hospital Information</title>
+<style>
+    /* CSS for border box */
+    .hospital-info {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 20px;
+        overflow: hidden;
+    }
+
+    .hospital-info img {
+        float: left;
+        margin-right: 20px;
+        max-width: 200px;
+        max-height: 150px;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .hospital-info table {
+        width: 100%;
+        margin-top: 10px;
+        border-collapse: collapse;
+    }
+
+    .hospital-info th, .hospital-info td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+    }
+
+    .hospital-info th {
+        background-color: #f2f2f2;
+    }
+
+    .request-button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-top: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .request-button a{
+        text-decoration: none;
+         color:#fff;
+    }
+
+    /* Popup styles */
+    .popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: none;
+        z-index: 1000;
+    }
+
+    .popup p {
+        margin: 0;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        z-index: 900;
+    }
+</style>
+</head>
+<body>
+
+<div class="hospital-info">
+    <img src="https://res.cloudinary.com/dalmvzwgj/image/upload/v1718900196/hsptl5_dct3bn.jpg" alt="Hospital Image">
+    <br>
+    <br>
+    <table>
+        <tr>
+            <th>Hospital Name</th>
+            <td>NIMS Hospital</td>
+        </tr>
+        <tr>
+            <th>Location</th>
+            <td>Hyderabad, India</td>
+        </tr>
+        <tr>
+            <th>Services</th>
+            <td>
+                <ul>
+                    <li>Emergency Care</li>
+                    <li>Surgery</li>
+                    <li>Radiology</li>
+                    <li>Blood Services</li>
+                    <li>X-ray</li>
+                    <li>RoomCleaning Services</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <th>Available Organs</th>
+            <td>
+                <ul>
+                    <li>Kidney</li>
+                    <li>Lungs</li>
+                    <li>Heart</li>
+                    <li>Eyes</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <button class="request-button"><a href="requestform.php">Request</a></button>
+    <button class="request-button" style="background-color: #000;"><a href="hospital.php">Back</a></button>
+</div>
+
+<!-- Popup -->
+<div class="overlay" onclick="hidePopup()"></div>
+<div class="popup" id="popup">
+    <p>Request successfully sent!</p>
+</div>
+
+<script>
+    function showPopup() {
+        document.getElementById('popup').style.display = 'block';
+        document.querySelector('.overlay').style.display = 'block';
+    }
+
+    function hidePopup() {
+        document.getElementById('popup').style.display = 'none';
+        document.querySelector('.overlay').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

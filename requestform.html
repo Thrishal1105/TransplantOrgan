@@ -1,0 +1,246 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "organs";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $fullName = isset($_POST['fullName']) ? $_POST['fullName'] : '';
+    $email = isset($_POST['email']) ? $_POST['email'] : '';
+    $patientName = isset($_POST['patientName']) ? $_POST['patientName'] : '';
+    $patientAge = isset($_POST['patientAge']) ? $_POST['patientAge'] : '';
+    $dateOfBirth = isset($_POST['dateofbirth']) ? $_POST['dateofbirth'] : '';
+    $bloodGroup = isset($_POST['BLOOD_GROUPr']) ? $_POST['BLOOD_GROUPr'] : '';
+    $gender = isset($_POST['Gender']) ? $_POST['Gender'] : '';
+    $address = isset($_POST['address']) ? $_POST['address'] : '';
+    $organs = isset($_POST['organs']) ? implode(", ", $_POST['organs']) : '';
+    $reason = isset($_POST['reason']) ? $_POST['reason'] : '';
+
+    $stmt = $conn->prepare("INSERT INTO organrequests (fullName, email, patientName, patientAge, dateOfBirth, bloodGroup, gender, address, organs, reason) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssssssss", $fullName, $email, $patientName, $patientAge, $dateOfBirth, $bloodGroup, $gender, $address, $organs, $reason);
+
+    if ($stmt->execute()) {
+        echo "<script>alert('Data successfully stored!'); window.location.href='submited.php';</script>";
+        exit;
+    } else {
+        echo "Error: " . $stmt->error;
+    }
+    
+    $stmt->close();
+}
+$conn->close();
+?>
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Organ Request Form</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h2>Organ Request Form</h2>
+    <form id="organRequestForm" method="POST" >
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="patientName">Patient's Name:</label>
+        <input type="text" id="patientName" name="patientName" required>
+
+        <label for="patientAge">Patient's Age:</label>
+        <input type="number" id="patientAge" name="patientAge" required>
+        <br>
+
+        <div class="inputfield">
+            <label for="dateofbirth">Date of Birth:</label>
+            <br>
+            <input type="date" class="input" id="dateofbirth" name="dateofbirth" required>
+        </div>
+        <br>
+
+        <div class="inputfield">
+            <label for="blood-select">Blood Group:</label>
+            <div class="custom_select">
+                <select name="BLOOD_GROUPr" id="blood-select" required>
+                    <br>
+                    <option value="">Select</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+            </div>
+        </div>
+        <br>
+        
+        <div class="inputfield">
+            <label for="gender-select">Gender:</label>
+            <div class="custom_select">
+                <select name="Gender" id="gender-select" required>
+                    <br>
+                    <option value="">Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+        </div>
+        <br>
+        
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" required></textarea>
+        
+        <label>Organs Needed:</label><br>
+        <input type="checkbox" id="heart" name="organs[]" value="heart">
+        <label for="heart">Heart</label><br>
+
+        <input type="checkbox" id="liver" name="organs[]" value="liver">
+        <label for="liver">Liver</label><br>
+
+        <input type="checkbox" id="kidney" name="organs[]" value="kidney">
+        <label for="kidney">Kidney</label><br>
+
+        <input type="checkbox" id="lungs" name="organs[]" value="lungs">
+        <label for="lungs">Lungs</label><br>
+
+        <label for="reason">Why do you need the organ(s)?</label><br>
+        <textarea id="reason" name="reason" rows="4" required></textarea>
+
+        <div class="buttons">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+            <button style="background-color: #000;"><a href="index.php">Home</a></button>
+        </div>
+    </form>
+</div>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.buttons {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.buttons a{
+    text-decoration: none;
+    color: #fff;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: #fff;
+    margin-right: 10px;
+}
+
+button[type="reset"] {
+    background-color: #f44336;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
+
+</body>
+</html>
+

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="success-container">
+        <div class="circle">
+            <div class="tick-symbol">✔</div>
+        </div>
+        <h1 class="animated-heading">Submitted Successfully</h1>
+        <button><a href="index.html">Home</a></button>
+    </div>
+    <style>
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+.success-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: scale(0.8);
+    animation: popUp 1s ease-out forwards;
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 10px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: drawCircle 1s 0.5s ease-out forwards;
+}
+
+.tick-symbol {
+    font-size: 80px;
+    color: green;
+    opacity: 0;
+    animation: showTick 0.5s 1.5s ease-out forwards;
+}
+
+.animated-heading {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333;
+    opacity: 0;
+    animation: fadeInUp 1s 2s ease-out forwards;
+}
+
+button{
+    background-color: #4CAF50;
+     color: white;
+     display: inline-block;
+        font-size: 18px;
+        cursor: pointer;
+}
+button a {
+    text-decoration: none;
+    color: #000;
+
+}
+
+/* Keyframes for body fade-in animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Keyframes for container pop-up animation */
+@keyframes popUp {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Keyframes for circle drawing animation */
+@keyframes drawCircle {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Keyframes for tick symbol appearance */
+@keyframes showTick {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Keyframes for heading text fade-in and slide-up animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+    </style>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>services</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="section">
+        <div class="title">
+            <h1 style="color: brown;">Our Services</h1>
+        </div>
+        <div class="services">
+            <div class="card">
+                <div class="icon">
+                <i class="bi bi-truck"></i>
+                </div>
+                <h2>Transport services</h2>
+                <p>our transport services operate around the clock to facilitate the rapid movement of organs between hospitals and transplant centers.Our commitment to excellence in transport services reflects our dedication to saving lives and improving the outcomes of organ transplants.</p>
+                <a href="" class="button">Read More</a>
+            </div>
+            <div class="card">
+                <div class="icon">
+                <i class="bi bi-telephone-fill"></i>
+                </div>
+                <h2>24/7 Support</h2>
+                <p> Our 24/7 support services are designed to offer continuous assistance, ensuring that help is always available whenever it’s needed. Whether you have questions about the organ donation process, need guidance through registration, or require urgent assistance with organ requests. </p>
+                <a href="" class="button">Read More</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">
+                <i class="bi bi-person-circle"></i>
+                </div>
+                <h2>Customer Care</h2>
+                <p>Our customer care team is available to answer your questions, guide you through the organ donation process, and address any concerns you may have. From initial inquiries to post-donation follow-ups, we are committed to ensuring a seamless and supportive experience.</p>
+                <a href="" class="button">Read More</a>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <style>
+
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body{
+            width: 100%;
+            /* background-color:#b8d4de */
+
+        }
+
+        .title h1{
+            text-align: center;
+            padding-top: 50px;
+            font-size: 42px;
+        }
+        .title h1::after{
+            content: "";
+            height: 4px;
+            width: 230px;
+            background-color: #000;
+            display: block;
+            margin: auto;
+        }
+
+        .services{
+            width: 85%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 75px auto;
+            text-align: center;
+        }
+
+        .card{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            margin: 0px 20px;
+            padding: 20px 20px;
+            background-color: #efefef;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .card:hover{
+            background-color: #b8d4de;
+            transition: 0.4s ease;
+        }
+
+        .card .icon{
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .card h2{
+            font-size: 28px;
+            color: #c94f4f;
+            margin-bottom: 20px;
+        }
+
+        .card p{
+            font-size: 17px;
+            margin-bottom: 30px;
+            line-height: 1.5;
+            color: #5e5e5e;
+        }
+
+        .button{
+            font-size: 15px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #2c677c;
+            padding: 8px 12px;
+            border-radius: 5px;
+            letter-spacing: 1px;
+        }
+        .button:hover{
+            background-color: #c94f4f;
+            transition: 0.4s ease;
+        }
+
+        @media screen and (max-width:940px){
+            .services{
+                display: flex;
+                flex-direction: column;
+            }
+
+            .card{
+                width: 85%;
+                display: flex;
+                margin: 20px 0px;
+            }
+        }
+    </style>
+</body>
+</html>

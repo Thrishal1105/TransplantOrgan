@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling Hospital</title>
+    
+</head>
+<body>
+    <!-- <div class="scrolling-text-container">
+        <div class="scrolling-text">
+            <p>This is an example of scrolling text in HTML, CSS, and JavaScript. Scrolling text can be useful for displaying announcements, news tickers, or any dynamic content that needs to continuously loop.</p>
+        </div>
+    </div>
+
+    <style>
+
+     body {
+         font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+     padding: 0;
+      }
+
+     .scrolling-text-container {
+      overflow: hidden;
+       width: 100%;
+      background-color: #333;
+     color: #fff;
+      padding: 10px 0;
+      }
+
+     .scrolling-text {
+       white-space: nowrap;
+      animation: scroll-left 15s linear infinite;
+      }
+
+      @keyframes scroll-left {
+      0% {
+         transform: translateX(100%);
+       }
+       100% {
+         transform: translateX(-100%);
+       }
+      }
+
+      .scrolling-text p {
+      padding: 0 20px;
+      margin: 0;
+       }
+
+    </style> -->
+
+
+    <div class="scrolling-text-container">
+        <div class="scrolling-text">
+            <p>    !.....Updates of Hospital Organs.       !.....Updates of Hospital Organs.          !.....Updates of Hospital Organs.      !.....Updates of Hospital Organs.       !.....Updates of Hospital Organs.</p>
+        </div>
+      </div>
+         
+        <h2 style="text-align: center;color: brown;"><u>HOSPITALS</u></h2>
+
+
+      <div class="image-section">
+        <div class="image-container">
+            <h2 class="subheader"><u>Yashoda Hospital</u></h2>
+            <img class="imgrad" src="https://res.cloudinary.com/dalmvzwgj/image/upload/v1719302992/hsptl3_wwrjou.jpg" alt="Image 1" style="width: 500px; height: 300px; padding-left: 105px;">
+            <button class="button" ><a href="table1.php">Click</a></button>
+        </div>
+        <div class="image-container">
+              <h2 class="subheader"><u>V-Care Hospital</u></h2>
+            <img  class="imgrad" src="https://res.cloudinary.com/dalmvzwgj/image/upload/v1719302993/hsptl1_h7mvwj.jpg" alt="Image 2" style="width: 500px; height: 300px; padding-left: 105px; ">
+            <button class="button" ><a href="table2.php">Click</a></button>
+        </div>
+      </div>
+
+      <div class="image-section">
+        <div class="image-container">
+           <h2 class="subheader"><u>Apollo Hospital</u></h2>
+            <img class="imgrad" src="https://res.cloudinary.com/dalmvzwgj/image/upload/v1719302999/hsptl6_r8ur05.jpg" alt="Image 3" style="width: 500px; height: 300px; padding-left: 105px;" >
+            <button  class="button"><a href="table3.php">Click</a></button>
+        </div>
+        <div class="image-container">
+               <h2 class="subheader"><u>KIMS Hospital</u></h2>
+            <img class="imgrad" src="https://res.cloudinary.com/dalmvzwgj/image/upload/v1719302995/hsptl4_y44mlw.jpg" alt="Image 4" style="width: 500px; height: 300px; padding-left: 105px;">
+            <button  class="button"><a href="table4.php">Click</a></button>
+        </div>
+       </div>
+
+      <div class="image-section">
+        <div class="image-container">
+              <h2 class="subheader"><u>NIMS Hospital</u></h2>
+            <img class="imgrad" src="https://res.cloudinary.com/dalmvzwgj/image/upload/v1719303002/hsptl5_xb2dkj.jpg" alt="Image 5" style="width: 500px; height: 300px; padding-left: 105px;">
+            <button class="button" ><a href="table5.php">Click</a></button>
+        </div>
+        <div class="image-container">
+             <h2 class="subheader"><u>Global Hospital</u></h2>
+            <img class="imgrad" src="https://res.cloudinary.com/dalmvzwgj/image/upload/v1719303015/hsptl2_z63gro.jpg" alt="Image 6" style="width: 500px; height: 300px; padding-left: 105px;">
+            <button class="button" ><a href="table6.php">Click</a></button>
+        </div>
+
+
+        <style>
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.scrolling-text-container {
+    overflow: hidden;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.scrolling-text {
+    white-space: nowrap;
+    animation: scroll-left 15s linear infinite;
+}
+
+.button {
+  color: #fff;
+  font-family: inherit;
+  display: inline-block;
+  width: 6em;
+  height: 2.6em;
+  line-height: 2.5em;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 20px;
+  font-size: 17px;
+  z-index: 1;
+  color: var(--color);
+  border: 2px solid var(--color);
+  border-radius: 6px;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.button::before {
+  position: absolute;
+  content: "";
+  background: var(--color);
+  width: 150px;
+  height: 200px;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.button:hover {
+  color: white;
+}
+
+.button:before {
+  top: 100%;
+  left: 100%;
+  transition: 0.3s all;
+}
+
+.button:hover::before {
+  top: -30px;
+  left: -30px;
+}
+
+.button a{
+    text-decoration: none;
+    color:#fff;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.scrolling-text p {
+    padding: 0 20px;
+    margin: 0;
+}
+
+.image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.image-container {
+    text-align: center;
+    margin: 10px;
+    flex-basis: calc(50% - 20px); /* Two images per row with margin */
+}
+
+.subheader {
+    color:#000;
+}
+
+.imgrad{
+    border-radius: 10px;
+    border-top-left-radius: 10px;
+
+}
+
+         .image-container img {
+          max-width: 100%;
+         height: auto;
+            display: block;
+          margin-bottom: 10px;
+          }
+
+         button {
+          padding: 8px 16px;
+         background-color: #333;
+          color: #fff;
+          border: none;
+         cursor: pointer;
+          }
+
+          button:hover {
+          background-color: #555;
+         }
+
+
+        </style>
+
+         <script>
+            function scrollToImage(selector) {
+    const element = document.querySelector(selector);
+    element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+}
+
+         </script>
+
+
+    </div>
+
+
+</body>
+</html>

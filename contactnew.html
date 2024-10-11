@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>contact</title>
+</head>
+<body>
+    <section id="contact">
+  
+        <h1 class="section-header" style="color:brown"><u>Contact us</u></h1>
+        
+        <div class="contact-wrapper">
+        
+        <!-- Left contact page --> 
+          
+          <form id="contact-form" class="form-horizontal" role="form">
+             
+            <div class="form-group">
+              <div class="col-sm-12">
+                <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required style="width: 300px;padding-bottom: 10px;">
+              </div>
+            </div>
+            <br>
+      
+            <div class="form-group">
+              <div class="col-sm-12">
+                <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required style="width: 300px; padding-bottom: 10px;">
+              </div>
+            </div>
+            <br>
+      
+            <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required style="width: 300px; height: 300px;"></textarea>
+            <br>
+            <!-- <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND" style="width: 300px;">
+              <div class="alt-send-button">
+                <i style="font-size: ;" class="bi bi-send"></i><span class="send-text"></span>
+              </div>
+            
+            </button>
+             -->
+            <br>
+             <div class="button1">
+                <button class="btn1" style="background-color:lightskyblue;color: #000; font-size: medium; padding: 5px;width: 300px; cursor: pointer; border-radius: .6em;" >Send</button>
+             </div>
+          </form>
+          
+        
+          
+            <div class="direct-contact-container">
+      
+              <ul class="contact-list">
+                <li class="list-item"><i class="bi bi-geo-alt-fill"><span class="contact-text place">Wanaparthy,Telangana,India</span></i></li>
+                
+                <li class="list-item"><i class="bi bi-telephone-fill"></i><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call">91+123 456 7890</a></span></i></li>
+                
+                <li class="list-item"><i class="bi bi-envelope"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">transplantorgan@gmail.com</a></span></i></li>
+                
+              </ul>
+      
+              <hr>
+              <ul class="social-media-list">
+                </li>
+                <li><a href="#" target="_blank" class="contact-icon">
+                    <i class="bi bi-github"></i></a>
+                </li>
+                <li><a href="#" target="_blank" class="contact-icon">
+                    <i class="bi bi-twitter"></i></a>
+                </li>
+                <li><a href="#" target="_blank" class="contact-icon">
+                    <i class="bi bi-instagram"></i></a>
+                </li>       
+              </ul>
+              <hr>
+      
+              
+      
+            </div>
+          
+        </div>
+        
+      </section>  
+        
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  padding-bottom: 100px;
+}
+
+#contact {
+  width: 100%;
+  height: 100%;
+}
+
+.section-header {
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 0;
+  font: 300 60px 'Oswald', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  max-width: 840px;
+}
+
+
+/* Left contact page */
+.form-horizontal {
+  max-width: 400px;
+  font-family: 'Lato';
+  font-weight: 400;
+  /* border: 1px solid #000; */
+}
+
+.form-control, 
+textarea {
+  max-width: 400px;
+  background-color: #000;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+/* .send-button {
+  margin-top: 15px;
+  height: 34px;
+  width: 400px;
+  overflow: hidden;
+  cursor: pointer;
+  color:black;
+  padding: 15px;
+  font-size: 20px;
+  justify-content: center;
+  /* transition: all .2s ease-in-out; */
+/* } */
+
+/* .alt-send-button {
+  width: 300px;
+  height: 34px;
+  justify-content: center; */
+
+  /* transition: all .2s ease-in-out; */
+/* } */
+
+ */
+
+ 
+.send-text {
+  display: block;
+  margin-top: 10px;
+  font: 700 12px 'Lato', sans-serif;
+  letter-spacing: 2px;
+}
+
+/* .alt-send-button:hover {
+  transform: translate3d(0px, -29px, 0px);
+} */
+
+/* Begin Right Contact Page */
+.direct-contact-container {
+  max-width: 400px;
+}
+
+/* Location, Phone, Email Section */
+.contact-list {
+  list-style-type: none;
+  margin-left: -30px;
+  padding-right: 20px;
+}
+
+.list-item {
+  line-height: 4;
+  color: #000;
+  font-size: 22px;
+}
+
+.contact-text {
+  font: 300 18px 'Lato', sans-serif;
+  letter-spacing: 1.9px;
+  color: #000;
+}
+
+.place {
+  margin-left: 62px;
+}
+
+.phone {
+  margin-left: 56px;
+}
+
+.gmail {
+  margin-left: 53px;
+  
+}
+
+.contact-text a {
+  color: #000;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.contact-text a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+
+/* Social Media Icons */
+.social-media-list {
+  position: relative;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.social-media-list li a {
+  color: #fff;
+}
+
+.social-media-list li {
+  position: relative; 
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 10px 3px;
+  line-height: 60px;
+  border-radius: 50%;
+  color: #000;
+  background-color: rgb(27,27,27);
+  cursor: pointer; 
+  transition: all .2s ease-in-out;
+}
+
+.social-media-list li:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 0 1px #000;
+  transition: all .2s ease-in-out;
+}
+
+.social-media-list li:hover {
+  background-color: #fff; 
+}
+
+.social-media-list li:hover:after {
+  opacity: 1;  
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+}
+
+.social-media-list li:hover a {
+  color: #000;
+}
+
+.copyright {
+  font: 200 14px 'Oswald', sans-serif;
+  color: #555;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+hr {
+  border-color: rgba(255,255,255,.6);
+}
+
+/* Begin Media Queries*/
+@media screen and (max-width: 850px) {
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .direct-contact-container, .form-horizontal {
+    margin: 0 auto;
+  }  
+  
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 300px;
+  }    
+  .social-media-list li {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+  }
+  .social-media-list li:after {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+}
+
+@media screen and (max-width: 569px) {
+
+  .direct-contact-container, .form-wrapper {
+    float: none;
+    margin: 0 auto;
+  }  
+  .form-control, textarea {
+    
+    margin: 0 auto;
+  }
+ 
+  
+  .name, .email, textarea {
+    width: 280px;
+  } 
+  
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 280px;
+  }  
+  .social-media-list {
+    left: 0;
+  }
+  .social-media-list li {
+    height: 55px;
+    width: 55px;
+    line-height: 55px;
+    font-size: 2rem;
+  }
+  .social-media-list li:after {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+  }
+  
+}
+
+@media screen and (max-width: 410px) {
+  .send-button {
+    width: 99%;
+  }
+}
+  </style>      
+
+  <script>
+    document.querySelector('#contact-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    e.target.elements.name.value = '';
+    e.target.elements.email.value = '';
+    e.target.elements.message.value = '';
+  });
+
+  </script>
+</body>
+</html>

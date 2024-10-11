@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="about.css">
+    <title>about</title>
+</head>
+<body>
+    <div class="heading">
+        <h1 style="color: brown;">About us</h1>
+    <p><b>Saving Lives, One Organ at a Time</b></p>
+    </div>
+    <div class="container">
+        <section class="about">
+            <div class="about_image">
+                <img src="https://res.cloudinary.com/dalmvzwgj/image/upload/v1719119577/aboutimg-modified_o2bnwx.png">
+            </div>
+            <div class="about_content">
+                <h2> Transplant Organ</h2>
+               <br> Transplant Organ is a web platform dedicated to bridging the gap between organ donors and recipients in critical situations. We believe everyone deserves a second chance at life, and our mission is to facilitate a seamless and efficient organ donation and transplant process.<br>
+
+        <br><b>The Need for Organ Donation </b><br>
+
+<br>Every day, countless individuals wait anxiously for a life-saving organ transplant. The demand for organs far exceeds the available supply, leaving many patients in a race against time.  Transplant Organ aims to change this reality.<br>
+
+<br><b>How We Work</b>
+<br>
+
+<br>Transplant Organ provides a user-friendly platform for both organ recipients and donors to connect. Recipients can register and search for compatible organs based on various criteria, increasing their chances of finding a match. <br> Donors can register their willingness to donate, potentially saving multiple lives.  Hospitals performing transplants can also register to manage their organ inventory and update availability in real-time, ensuring efficient allocation of organs.<br>
+
+<br><b>Committed to Security and Transparency</b><br>
+<br>
+
+   We understand the sensitive nature of organ donation and prioritize user privacy. Transplant Organ utilizes secure measures to protect all user information.
+  <br>
+
+   <br><b>Join the Movement</b><br>
+   <br>
+
+   By becoming a part of Transplant Organ, you play a vital role in saving lives. Whether you're a potential donor, recipient, or simply an advocate for organ donation, we encourage you to register and explore our platform.
+                   
+   <br>
+   <br>
+  <a href="" class="read_more">Read More</a>
+            </div>
+
+        </section>
+    </div>
+
+    <style>
+            *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Robot', sans-serif;
+   
+}
+
+body{
+    background-color: #f2f2f2;
+    /* background-color: rgb(123, 18, 18); */
+}
+
+.heading{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+}
+ 
+.heading h1{
+    font-size: 50px;
+    color: #000;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.heading h1::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: #000;
+}
+
+.heading p{
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 35px;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.about{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.about_image{
+    flex: 1;
+    margin-right: 40px;
+    overflow: hidden;
+}
+
+.about_image img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+}
+
+.about_image:hover img{
+    transform: scale(1.2);
+}
+
+.about_content{
+    flex: 1;
+}
+
+.about_content h5{
+    font-size: 23px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.about_content p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.about_content .read_more{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    font-size: 19px;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 15px;
+    transition: 0.3s ease;
+
+}
+
+.about_content .read_more:hover{
+    background-color: #3e8e41;
+}
+
+@media screen and(max-width:768px) {
+    .heading{
+        padding: 0px 20px;
+    }
+    
+    .heading h1{
+        font-size: 36px;  
+    }
+    .heading p{
+        font-size: 17px;
+        margin-bottom: 0px;
+    }
+    .container{
+        padding: 0px;
+    }
+    .about{
+        padding: 20px;
+        flex-direction: column;
+    }
+    .about_image{
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    .about_content{
+        padding: 0px;
+        font-size: 16px;
+    }
+    .about_content .read_more{
+        font-size: 16px;
+    }
+}
+    
+    
+    </style>
+
+
+</body>
+</html>
